@@ -34,10 +34,10 @@ export class MomentComponent {
     this.momentService.getMoment(id).subscribe((item) => (this.moment = item.data));
   }
 
-  removeHandler(id: number) {
-    this.momentService.removeMoment(id).subscribe();
-
-    this.messagesService.add('Momento excluído com sucesso!');
-    this.router.navigate(['/']);
+  async removeHandler(id: number) {
+    await this.momentService.removeMoment(id).subscribe(() => {
+      this.messagesService.add('Momento excluído com sucesso!');
+      this.router.navigate(['/']);
+    });
   }
 }
