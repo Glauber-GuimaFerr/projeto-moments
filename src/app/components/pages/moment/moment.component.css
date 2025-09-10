@@ -44,11 +44,11 @@ img {
 }
 
 .comment {
-    font-size: 0.9em;
+    font-size: 1.2em;
 }
 
 .author {
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
 .comment-form {
@@ -60,6 +60,10 @@ img {
     text-align: left;
     max-width: 300px;
     margin-left: 0px;
+}
+
+.comment span {
+    font-weight: bold;
 }
 
 .author span {
